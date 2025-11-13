@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.cv{
+    /* width: 100px; */
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #062628;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+.catagorie{
+    padding:0px 10px ;
+}
+.catagorie .catagories{
+    color: #42999E;
+    font-weight: bold;
+    
+}
+
+.catagorie .catagories:hover{
+    color: #062628;
+}
+
+.main{
+    background-image: url(./assert/hero_bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 100vh; */
+    padding: 20px 0px;
+}
+
+#about{
+    padding: 20px 40px;
+}
+
+#about img{
+    border: 5px solid #354d4f;
+}
+
+#about p{
+    color: rgb(98, 97, 97);
+}
+
+#about h4{
+    color: #42999E;
+    font-weight: bold;
+}
+
+#qualification button{
+    color: #42999E ;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #062628 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white !important;
+    background: linear-gradient(rgb(19, 128, 134) 0%, rgb(6, 38, 40) 100%) ;
+}
+.nav-pills {
+   
+    --bs-nav-pills-link-active-bg:#062628 !important ;
+}
+
+.edu h5{
+    color: #42999E;
+}
+.edu{
+    width: 75% !important;
+    padding: 0px 20px !important;
+}
+
+.year{
+    color: white;
+    background: linear-gradient(rgb(19, 128, 134) 0%, rgb(6, 38, 40) 100%) ;
+    padding: 3px;
+}
+
+.text a{
+    text-decoration: none;
+    color: #062628;
+}
+
+.hobbies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.hobbies h6{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.hobbies h4{
+    color: #42999E;
+    font-weight: bold;
+}
+
+.hobbies_name p{
+    width: 220px;
+    border: 1px solid #a1cccf80;
+    padding: 20px;
+    text-align: center;
+    color: #42999E;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: rgb(66, 153, 158,0.1);
+    margin:20px auto 0px auto;
+}
+
+.hobbies_name p:hover{
+    color: white;
+    background: linear-gradient(rgb(19, 128, 134) 0%, rgb(6, 38, 40) 100%);
+}
+
+.skill{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f7f7;
+    padding: 25px 0 ;
+}
+
+.skill h6{
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+.skill h4{
+    color: #42999E;
+    font-weight: bold;
+}
+
+.skill_name1 {
+    width: 250px;
+    border: 1px solid #a1cccf80;
+    padding: 20px;
+    text-align: center;
+    color: #42999E;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: rgb(66, 153, 158,0.1);
+    margin:20px auto 0px auto;
+
+}
+
+.skill_name1{
+    font-size: 20px;
+}
+
+.skill_name1 i{
+    color: white;
+}
+
+.icon{
+    background: linear-gradient(rgb(19, 128, 134) 0%, rgb(6, 38, 40) 100%);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.footer{
+    background-color: #062628;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.footer i{
+    border: 1px solid #42999E;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 5px 0;
+    transition: all 0.3s ;
+}
+
+.re{
+     position: relative;
+     padding: 5px 0;
+   }
+
+.re::before{
+       content: " ";
+       position: absolute;
+       margin: 5px 0 0 0;
+       width: 300px;
+       height:2px;
+       background-color: #11494e;
+       left: -100px;
+       top: 30px;
+   }
+
+.footer i:hover {
+  transform: scale(1.1);
+}
+
+   
+
+
+
+
+@media screen and (max-width: 700px){
+
+     .one{ order: 2;}
+     .two{ order: 1;}
+
+     #about{
+        padding: 0px;
+     }
+
+    .edu {
+    width: auto !important;
+    padding: 0px 10px;
+}
+
+.edu h5{
+    font-size: 20px;
+}
+
+   .edu .name,li{
+    font-size: 15px;
+   }
+    .year{
+        font-size: 10px;
+        width: 60px;
+    }
+
+    .college{
+        flex-direction: column;
+       
+    }
+
+    .item{
+        width: auto !important;
+        padding: 0 0 0 5px;
+    }
+}
