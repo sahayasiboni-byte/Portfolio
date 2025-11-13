@@ -23,6 +23,8 @@
   <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js">
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -56,8 +58,8 @@
                 <a class="nav-link catagories" href="#project">Project</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <button class="cv">Download CV</button>
+           <form class="d-flex" role="search" onsubmit="downloadCV(event)">
+                    <button type="submit" class="cv">Download CV</button>
             </form>
           </div>
         </div>
@@ -88,15 +90,14 @@
 
     </div>
 
+    <!-- about -->
     <div class="container">
       <div id="about" class="row align-items-center">
-        <div class="col-sm-12 col-md-6  pe-4 mt-5 one">
+        <div class="col-sm-12 col-md-6  pe-4 mt-5 one" data-aos="zoom-in-right">
           <img src="./assert/about.jpeg" alt="">
         </div>
-
-
-        <!-- ABOUT -->
-        <div class="col-sm-12 col-md-6 ps-4 two">
+  
+        <div class="col-sm-12 col-md-6 ps-4 two" data-aos="zoom-in-left">
           <h6 class="mt-5">About Me</h6>
           <p>I am Sahaya Siboni, a passionate Full Stack Developer Intern with strong skills in HTML, CSS, and Python. I
             love crafting seamless digital experiences that combine clean design with efficient functionality.</p>
@@ -118,7 +119,7 @@
       <p class="text-center text-body-secondary">Proficient in front-end development, UI/UX design, and responsive web
         design. Skilled in HTML, CSS, <br>and bootstrap for creating clean and user-friendly interfaces.</p>
 
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="skill_name container row justify-content-center">
 
           <div class="col-sm-12 col-md-4 mb-3">
@@ -260,8 +261,8 @@
     </div>
 
     <!-- project -->
-     <div id="project">
-    <h6 class="d-flex justify-content-center mt-5 mb-4 " style="font-weight: bold;">My Works</h6>
+     <div id="project" class="my-5">
+    <h6 class="d-flex justify-content-center mt-5" style="font-weight: bold;">My Works</h6>
     <div class="owl-carousel owl-theme owl-loaded owl-drag">
 
       <div class="owl-stage-outer">
@@ -272,13 +273,13 @@
           <div class="owl-item cloned" style="width: 128.906px; margin-right: 10px;">
             <!-- <div class="container"> -->
             <div class="item row m-auto align-items-center justify-content-around" style="width: 75%;">
-              <div class="col-sm-12 col-md-6 ps-4 px-5 pt-3 pb-5">
+              <div class="col-sm-12 col-md-6 ps-4 px-5 pt-3 pb-5" data-aos="fade-up-right">
                 <video width="100%" height="240" autoplay controls>
                   <source src="./Screen Recording 2025-11-09 203548.mp4" type="video/mp4">
                 </video>
               </div>
 
-              <div class="col-sm-12 col-md-6 ps-4">
+              <div class="col-sm-12 col-md-6 ps-4" data-aos="fade-up-left">
                 <h4 style="color: #42999E;">Restaurant Website</h4>
                 <p style="color: gray;">I designed and developed a fully responsive restaurant website using HTML and CSS. The site features
                   a
@@ -316,7 +317,7 @@
 
     <!-- Hobbies -->
     <div class="hobbies">
-      <h6 class="mt-5">Hobbies</h6>
+      <h6>Hobbies</h6>
       <h4>Things I Love to Do</h4>
       <div class="container">
         <div class="hobbies_name row justify-content-center text-center">
@@ -386,22 +387,28 @@
 
   </script>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+  AOS.init();
+</script>
+
+<script>
+function downloadCV(event) {
+  event.preventDefault(); // prevent form submission / page reload
+
+  // Replace this with the actual file path or URL of your PDF
+  const fileUrl = "assert/Sahaya_Siboni_CV.pdf";
+
+  // Create a hidden link element
+  const link = document.createElement("a");
+  link.href = fileUrl;
+  link.download = "Sahaya_Siboni_CV.pdf"; // Name of the downloaded file
+  link.click();
+}
+</script>
+
+
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Excited to share my latest front-end project — a Restaurant Website Landing Page, designed and developed using HTML and CSS.
-
-This project helped me strengthen my skills in UI layout, responsive design, and clean visual presentation. I focused on creating an engaging and user-friendly interface that reflects the brand’s personality and enhances the dining experience online. -->
